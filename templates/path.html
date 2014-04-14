@@ -1,2 +1,4 @@
 <ul>
-    #{pathJoin path}
+    $forall filename <- content
+        <li>
+            <a href=@{PathR (path ++ [pack filename])}>#{filename}
