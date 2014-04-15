@@ -1,2 +1,4 @@
 / HomeR GET
 /p/*Texts PathR GET
+/static StaticR Static getStatic
+

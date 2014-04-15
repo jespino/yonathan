@@ -19,6 +19,6 @@ executable yonathan
   main-is: yonathan.hs
   -- other-modules:       
   other-extensions:    TupleSections, OverloadedStrings
-  build-depends:       base >=4.6 && <4.7, yesod >=1.2, text, filepath, directory, unix
+  build-depends:       base >=4.6 && <4.7, yesod >=1.2, text, filepath, directory, unix, shakespeare, yesod-static
   -- hs-source-dirs:      
   default-language:    Haskell2010
