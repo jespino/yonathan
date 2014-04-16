@@ -1,4 +1,12 @@
-<ul>
-    $forall filename <- content
-        <li>
-            <a href=@{PathR (path ++ [pack filename])}>#{filename}
+<div id="navlist">
+    <ul>
+        $forall filename <- content
+            <li class='link'>
+                <a href=@{PathR (path ++ [pack filename])}>
+                    <img src=@{StaticR img_folder_png}>
+                    <span class="folder">#{filename}</span>
+            <li class='link'>
+                <a href=@{PathR (path ++ [pack filename])}>
+                    <img src=@{StaticR img_file_png}>
+                    <span class="file">#{filename}</span>
+                    <span class="last_view_date"></span>
