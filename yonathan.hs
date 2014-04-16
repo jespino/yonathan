@@ -37,14 +37,14 @@ getHomeR = defaultLayout $(whamletFile "templates/home.html")
 getPathR :: [Text] -> Handler Html
 getPathR path = do
     file <- lift $ getFileStatus $ realPath path
-    case isDirectory file of
-        True -> defaultLayout $ do
+    if isDirectory file then
+        defaultLayout $ do
             content <- lift $ getDirectoryContents $ realPath path
             $(whamletFile "templates/path.html")
-        False -> defaultLayout $ do
+    else defaultLayout $ do
             $(whamletFile "templates/file.html")
 
 main :: IO()
 main = do
-    staticX <- static "static"
-    warp 3000 Yonathan
+    static <- static "static"
+    warp 3000 $ Yonathan static

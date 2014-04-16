@@ -6,10 +6,10 @@ $doctype 5
         <title>#{title}
         ^{headTags}
 
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen, tv, projection">
-        <script src="{{ url_for('static', filename='js/jquery.js') }}">
-        <script src="{{ url_for('static', filename='js/date.format.js') }}">
-        <script src="{{ url_for('static', filename='js/jonathan.js') }}">
+        <link rel="stylesheet" type="text/css" href=@{StaticR css_style_css} media="screen, tv, projection">
+        <script src=@{StaticR js_jquery_js}>
+        <script src=@{StaticR js_date_format_js}>
+        <script src=@{StaticR js_jonathan_js}>
     <body>
         <div id="header">
             <div class="subContainer">
