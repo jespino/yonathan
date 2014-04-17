@@ -11,6 +11,7 @@ import System.Posix.Files
 import System.Directory
 import Text.Hamlet
 import Yesod.Static
+import qualified Settings as Settings
 
 staticFiles "static"
 

@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 
 executable yonathan
   main-is: yonathan.hs
-  -- other-modules:       
+  other-modules: Settings
   other-extensions:    TupleSections, OverloadedStrings
   build-depends:       base >=4.6 && <4.7, yesod >=1.2, text, filepath, directory, unix, shakespeare, yesod-static
   -- hs-source-dirs:      
